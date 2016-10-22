@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script src="javascripts/vue.js"></script>
+</head>
+<body id="app">
+    输出其值：<br />
+    <div v-for="item in showData">
+        {{ item }}
+    </div>
+
+    <hr />
+    绑定number输出:<br />
+    <template v-for="item in showData">
+        <input type="number" v-model="item"><br />
+    </template>
+
+    <hr />
+    绑定text输出：<br />
+    <template v-for="item in showData">
+        <input type="text" v-model="item"> <br />
+    </template>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data:function(){
+                return {
+                    showData:[11,12,13,14,15]
+                };
+            },
+            created:function(){
+                var vm = this;
+                console.log(vm.showData);
+            }
+        });
+    </script>
+</body>
+</html>

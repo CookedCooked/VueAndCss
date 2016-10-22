@@ -13,4 +13,11 @@ router.get('/demo',function(req,res,next){
    res.render('demo/template',{});
 });
 
+/**
+ * 去测试页面
+ */
+router.get('/showData',function(req,res){
+    res.render('test/template',{});
+});
+
 module.exports = router;
