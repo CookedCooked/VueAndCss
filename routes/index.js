@@ -20,4 +20,8 @@ router.get('/showData',function(req,res){
     res.render('test/template',{});
 });
 
+router.get('/index',function(req,res){
+    res.render('index',{});
+});
+
 module.exports = router;
